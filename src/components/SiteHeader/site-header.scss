@@ -1,0 +1,39 @@
+.site-header{    
+    height:84px;
+    .header-wrapper{
+        position:fixed;
+        z-index:9999;
+        top:0;
+        right:0;
+        left:0;
+        height:84px;
+        padding:24px 12px;
+        background-color: #d43c33;
+    }
+    .logo{
+        float: left;
+        margin:5px 3px;
+        line-height: 25px;
+    }
+    .logo-img{
+        width:142px;
+        height:25px;
+    }
+    .site-name{
+        position: absolute;
+        opacity:0;
+    }
+    .btn-wrapper{
+        float: right;
+    }
+    .btn{
+        display: block;
+        width:100px;
+        line-height: 36px;
+        text-align: center;
+        font-size: 16px;
+        color:#d43c33;
+        border-radius:18px;
+        background-color: #fff;
+    }
+}

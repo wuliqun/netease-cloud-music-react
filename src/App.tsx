@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import SiteHeader from './components/SiteHeader'
+import SiteBottom from './components/SiteBottom'
+import Loading from './components/Loading'
+import PlaylistList from './pages/index/components/playlistList'
+import IndexTab from './components/IndexTab'
+import TopSongs from './pages/index/components/TopSongs'
+
 import './App.css';
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <SiteHeader />
+            <IndexTab props={{top:'84px'}}/> 
+            <PlaylistList />      
+            <TopSongs />
+            <SiteBottom />
+        </div>
+    );
 }
 
 export default App;

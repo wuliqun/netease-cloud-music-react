@@ -1,0 +1,29 @@
+.index-tab{
+    height:40px;
+    .tab-list{
+        position:fixed;
+        left:0;
+        right:0;
+        z-index:9999;
+        box-shadow:0 1px 0 #ccc;
+        background-color: #fff;
+    }
+    .tab-item{
+        float: left;
+        width:33.33%;
+        height:40px;
+        line-height: 38px;
+        text-align: center;
+    }
+    .tab-link{  
+        display: inline-block;
+        padding:0 8px;
+        vertical-align: middle;      
+        font-size: 16px;
+        border-bottom:2px solid transparent;
+        &.active{
+            color:#d64840;
+            border-bottom-color:#d64840;
+        }
+    }
+}
