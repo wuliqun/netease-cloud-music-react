@@ -1,0 +1,43 @@
+.search-result{
+    .song-item{
+        margin:0 15px;
+    }
+    .song-link{
+        display: flex;
+        align-items: center;
+        padding:10px 0;
+        border-bottom: 1px solid #f1f1f1;
+        .info{
+            flex-grow: 1;
+            padding-right: 10px;
+            color:#888;
+            overflow: hidden;
+            font-size: 15px;
+            .name{
+                line-height:25px;
+                color:#333;                
+            }
+            .ar{
+                font-size: 12px;
+                .icon{
+                    display: inline-block;
+                    width:12px;
+                    height:8px;
+                    margin-right: 4px;
+                    background:url('../../../../../assets/images/index_icon.png') no-repeat 0 0;
+                    background-size:166px 97px;
+                }
+            }
+            .em-key{
+                color:#507daf;
+            }
+        }
+        .play-btn{
+            flex-shrink: 0;
+            width:22px;
+            height:22px;
+            background:url('../../../../../assets/images/index_icon.png') no-repeat -24px 0;
+            background-size:166px 97px;
+        }
+    }
+}

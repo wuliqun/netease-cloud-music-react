@@ -1,8 +1,10 @@
 import React from 'react'
-import SectionTitle from '../../../../components/SectionTitle'
+import { Link } from 'react-router-dom'
+import SectionTitle from 'components/SectionTitle'
+
 import './playlistList.scss'
-import { getRecommendPlaylist } from '../../../../service'
-import { Playlist } from '../../../../types'
+import { getRecommendPlaylist } from 'service'
+import { Playlist } from 'types'
 interface State{
     playlists:Array<Playlist>
 }
@@ -16,7 +18,6 @@ class PlaylistList extends React.Component<object,State>{
     }
     initData():void{
         getRecommendPlaylist().then(res=>{
-            console.log(res);
             this.setState({
                 playlists:res.result.slice(0,9)
             });
@@ -37,8 +38,8 @@ class PlaylistList extends React.Component<object,State>{
     }
     renderItem(playlist:Playlist):JSX.Element{
         return (
-            <li className="playlist-item">
-                <a href="" className="playlist-link">
+            <div className="playlist-item" key={playlist.id}>
+                <Link to={'/playlist/' + playlist.id } className="playlist-link">
                     <div className="img img-wrapper">
                         <img 
                             src={playlist.picUrl}
@@ -48,8 +49,8 @@ class PlaylistList extends React.Component<object,State>{
                         className="name f-thide-2">
                         {playlist.name}
                     </p>
-                </a>
-            </li>
+                </Link>
+            </div>
         )
     }
 }

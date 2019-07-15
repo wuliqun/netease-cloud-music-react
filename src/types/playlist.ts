@@ -1,0 +1,69 @@
+export interface Playlist{
+    id:number,
+    type:number,
+    name:string,
+    copywriter:string,
+    picUrl:string,
+    playCount:number,
+    trackCount:number,
+    highQuality:boolean,
+    [propName:string]:any
+}
+interface Creator{
+    userId:number,
+    province:number,
+    avatarUrl:string,
+    gender:number,
+    city:number,
+    birthday:number,
+    nickname:string,
+    signature:string,
+    description:string,
+    detailDescription:string,
+    backgroundUrl:string,
+    [propName:string]:any
+}
+export interface Track{
+    name:string,
+    id:number,
+    no:number,
+    ar:Array<{
+        id:number,
+        name:string,
+        alias:string[],
+        [propName:string]:any
+    }>,
+    pop:number,
+    al:{
+        id:number,
+        name:string,
+        picUrl:string,
+        [propName:string]:any
+    },
+    dt:number,
+    mv:number,
+    publishTime:number,
+    [propName:string]:any
+}
+export interface PlaylistDetail{
+    creator:Creator,
+    id:number,
+    tracks:Array<Track>,
+    subscribedCount:number,
+    createTime:number,
+    updateTime:number,
+    userId:number,
+    playCount:number,
+    description:string,
+    name:string,
+    tags:string[],
+    shareCount:string,
+    commentCount:number,
+    coverImgUrl:string,
+    [propName:string]:any
+}
+export interface PlaylistDetailResult{
+    playlist:PlaylistDetail,
+    code:number,
+    [propName:string]:any
+}

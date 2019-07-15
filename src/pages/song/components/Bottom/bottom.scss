@@ -1,0 +1,24 @@
+.song-detail-bottom{
+    height:40px;
+    display: flex;
+    .btn{
+        height:40px;
+        flex-grow:1;
+        margin-right: 10px;
+        line-height: 40px;
+        border-radius: 40px;
+        text-align: center;
+        font-size: 18px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &.btn-open{
+            color:#d33a31;
+            border:1px solid #d33a31;
+        }
+        &.btn-dld{
+            color:#fff;
+            background-color: #d33a31;
+        }
+    }
+}

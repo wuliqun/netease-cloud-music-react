@@ -1,0 +1,23 @@
+.hot-search{
+    .title{
+        line-height: 40px;
+        text-indent: 25px;
+        font-size: 13px;
+        color:#999;
+    }
+    .hot-search-list{
+        display: flex;
+        flex-wrap:wrap;
+        margin:0 15px;
+    }
+    .hot-search-item{
+        line-height: 32px;
+        flex-grow:1;
+        margin:0 10px 10px 0;
+        padding:0 6px;
+        text-align: center;
+        border:1px solid #eee;
+        border-radius:32px;
+        font-size: 14px;
+    }
+}

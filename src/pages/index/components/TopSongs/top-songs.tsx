@@ -1,7 +1,11 @@
 import React from 'react'
-import SectionTitle from '../../../../components/SectionTitle'
-import { getTopSongList } from '../../../../service'
-import { SongWrap } from '../../../../types'
+import { Link } from 'react-router-dom'
+import Loading from 'components/Loading'
+import SectionTitle from 'components/SectionTitle'
+import { getTopSongList } from 'service'
+import { SongWrap } from 'types'
+
+import './top-songs.scss'
 
 interface State{
     songs:Array<SongWrap>
@@ -28,28 +32,34 @@ class TopSongs extends React.Component<object,State>{
         return (
             <div className="top-songs">
                 <SectionTitle name="最新音乐" />
-                <ul className="song-list">
-                    { songItems }
-                </ul>
+                {
+                    this.state.songs.length ? 
+                    <ul className="song-list">
+                        { songItems }
+                    </ul> :
+                    <Loading/>
+
+                }
             </div>
         )
     }
     renderSong(song:SongWrap):JSX.Element{
         return (
-            <li className="song-item">
-                <a href="" className="song-link">
+            <li className="song-item" key={song.id}>
+                <Link to={'/song/' + song.id } className="song-link">
                     <div className="info">
-                        <p className="name">
-                            {song.name + (song.song.alias.length ? '（' + song.song.alias.join(' ') + '）':'')}
+                        <p className="name f-thide">
+                            <span className="em">{ song.name }</span>
+                            <span>{ (song.song.alias.length ? '（' + song.song.alias.join(' ') + '）':'') }</span>
                         </p>
-                        <p className="ar">
-                            {this.joinNames(song.song.artists) + '- ' + song.song.album.name}
+                        <p className="ar f-thide">
+                            { song.song.no === 1 && <span className="icon"></span> }
+                            <span>{this.joinNames(song.song.artists) + '- ' + song.song.album.name}</span>
                         </p>
                     </div>
                     <div className="play-btn">
-                        <span></span>
                     </div>
-                </a>
+                </Link>
             </li>
         )
     }

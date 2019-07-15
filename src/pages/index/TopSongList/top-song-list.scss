@@ -1,0 +1,41 @@
+.top-song-list{
+    .loading-wrapper{
+        padding:50px 0 300px;
+    }
+    .banner-wrapper{
+        position:relative;
+        height:0;
+        padding-top:39%;        
+        background:url(../../../assets/images/hot_music_bg.jpg);
+        background-size: 100% 100%;
+        .banner{
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            padding-left: 20px;
+        }
+        .banner-icon{
+            width:142px;
+            height:67px;
+            background:url(../../../assets/images/index_icon.png) no-repeat -24px -30px;
+            background-size: 166px 97px;
+        }
+        .time{
+            margin-top: 8px;
+            color:#fff;
+            font-size: 12px;
+        }
+    }    
+    .show-all{
+        text-align: center;
+        padding:6px 0;
+        a{
+            color:#666;
+        }
+    }
+}

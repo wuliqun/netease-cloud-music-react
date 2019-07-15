@@ -9,7 +9,7 @@ const SiteBottom:React.FC = ()=>{
                 <img src={footLogo} alt="foot-logo" className="logo-img"/>
             </div>
             <div className="btn-wrapper">
-                <a className="btn">打开APP，发现更多好音乐 ></a>
+                <button className="btn">打开APP，发现更多好音乐 ></button>
             </div>
             <div className="copyright">
                 <span>基于React typescript的个人实践项目 @Quino</span>

@@ -1,24 +1,38 @@
 import React from 'react';
-// import logo from './logo.svg';
-import SiteHeader from './components/SiteHeader'
-import SiteBottom from './components/SiteBottom'
-import Loading from './components/Loading'
-import PlaylistList from './pages/index/components/playlistList'
-import IndexTab from './components/IndexTab'
-import TopSongs from './pages/index/components/TopSongs'
+import IndexCommon from 'pages/index'
+import Default from 'pages/index/default'
+import TopSongList from 'pages/index/TopSongList'
+import Search from 'pages/index/Search'
+import Song from 'pages/song'
+import Playlist from 'pages/playlist'
+
+import { historyStore } from 'store'
+import { Route,Switch } from 'react-router'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import './App.css';
 
-const App: React.FC = () => {
-    return (
-        <div className="App">
-            <SiteHeader />
-            <IndexTab props={{top:'84px'}}/> 
-            <PlaylistList />      
-            <TopSongs />
-            <SiteBottom />
-        </div>
-    );
+class App extends React.Component {
+    render():JSX.Element{
+        return (
+            <Router>
+                <Switch>               
+                    <Route path="/song/:id" component={Song}/> 
+                    <Route path="/playlist/:id" component={Playlist}/>
+                    <IndexCommon>                
+                        <Route path="/" exact component={Default} />
+                        <Route path="/toplist" component={TopSongList} />
+                        <Route path="/search" component={Search} />
+                    </IndexCommon>                             
+                </Switch>
+            </Router>
+        );
+    }
+}
+window.onbeforeunload = ()=>{
+    historyStore.dispatch({
+        type:'SAVE_HISTORY'
+    });
 }
 
 export default App;

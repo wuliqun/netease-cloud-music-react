@@ -6,3 +6,4 @@ axios.defaults.withCredentials = true;
 
 export * from './playlistService'
 export * from './songService'
+export * from './commonService'

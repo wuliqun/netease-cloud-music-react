@@ -1,0 +1,41 @@
+.top-songs{
+    .song-link{
+        display:flex;
+        width:100%;
+        justify-content: space-between;
+        align-items: center;
+        padding:6px;
+        border-bottom:1px solid #eee;        
+    }
+    .info{
+        flex-grow:1;
+        overflow: hidden;
+        padding-right:20px;
+        color:#888;
+        font-size: 15px;
+        .name{
+            line-height:25px;
+            .em{
+                color:#333;
+            }
+        }
+        .ar{
+            font-size: 12px;
+            .icon{
+                display: inline-block;
+                width:12px;
+                height:8px;
+                margin-right: 4px;
+                background:url('../../../../assets/images/index_icon.png') no-repeat 0 0;
+                background-size:166px 97px;
+            }
+        }
+    }
+    .play-btn{
+        flex-shrink:0;
+        width:22px;
+        height:22px;
+        background:url('../../../../assets/images/index_icon.png') no-repeat -24px 0;
+        background-size:166px 97px;
+    }
+}

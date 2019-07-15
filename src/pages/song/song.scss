@@ -1,0 +1,56 @@
+.song-detail{
+    .song-bg{
+        position:fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-color:#161824;
+        &:after{
+            position: absolute;
+            content:' ';
+            top:0;
+            right:0;
+            left:0;
+            bottom:0;
+            background-color: rgba(0,0,0,.5);
+        }
+    }
+    .song-content{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        overflow: hidden;
+        background-color: #fcfcfd;
+    }
+    .song-scroll{
+        position: absolute;
+        z-index:100;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        overflow: scroll;
+    }
+    .sss{
+        height:2000px;
+        background-color: #fff;
+    }
+    .foot{
+        position: absolute;
+        z-index:20;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        padding:0 10px;
+    }
+    .comment{
+        height:2000px;
+    }
+}

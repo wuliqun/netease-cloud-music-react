@@ -1,20 +1,25 @@
 import React from 'react'
-import { indexTabProp } from '../../types'
+import { NavLink } from 'react-router-dom'
+
 import './index-tab.scss'
 
-class IndexTab extends React.Component<Partial<indexTabProp>>{
+interface Props{
+    top:number,
+    [propName:string]:any
+}
+class IndexTab extends React.Component<Partial<Props>>{
     render(){
         return (
             <div className="index-tab" style={{top:this.props.top}}>
                 <ul className="tab-list clearfix">
                     <li className="tab-item">
-                        <a className="tab-link active">推荐音乐</a>
+                        <NavLink to="/" exact className="tab-link">推荐音乐</NavLink>
                     </li>
                     <li className="tab-item">
-                        <a className="tab-link">热歌榜</a>
+                        <NavLink to="/toplist" className="tab-link">热歌榜</NavLink>
                     </li>
                     <li className="tab-item">
-                        <a className="tab-link">搜索</a>
+                        <NavLink to="/search" className="tab-link">搜索</NavLink>
                     </li>
                 </ul>
             </div>

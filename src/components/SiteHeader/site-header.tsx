@@ -11,7 +11,7 @@ const SiteHeader: React.FC = () => {
                     <img src={logo} alt="logo" className="logo-img"/>
                 </h1>
                 <div className="btn-wrapper">
-                    <a href="javascript:void(0)" className="btn">下载APP</a>
+                    <button className="btn">下载APP</button>
                 </div>
             </div>
         </header>
