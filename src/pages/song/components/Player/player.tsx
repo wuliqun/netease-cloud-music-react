@@ -4,7 +4,6 @@ import { getSongPlayingSrc } from 'service'
 import './player.scss'
 import logo from './logo.svg'
 import lyric from './lyric.json'
-import { transform } from '@babel/core';
 
 interface Props{
     id:number,
@@ -48,12 +47,12 @@ class Player extends React.Component<Props,State>{
             <div className="player-wrapper" ref={ele=>this.player = ele}>
                 <div className="tap-area" onClick={this.togglePlayStatus.bind(this)}></div>
                 <h1 className="logo">
-                    <img src={logo} alt=""/>
+                    <img src={logo}/>
                 </h1>
                 <div className="album">
                     <div className="al" style={{transform:'rotate(' + this.state.discRotateDeg + 'deg)'}}>
                         <div className="img">
-                            <img src={this.props.img} alt=""/>
+                            <img src={this.props.img}/>
                         </div>                        
                     </div>
                     {

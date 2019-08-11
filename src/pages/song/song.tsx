@@ -29,6 +29,8 @@ class Song extends React.Component<RouteComponentProps<{id:string}>,State>{
     }
     componentDidMount(){
         this.initData();
+        document.body.scrollTop = 1;
+        document.documentElement.scrollTop = 1;
     }
     render():JSX.Element{
         if(!this.state.song){

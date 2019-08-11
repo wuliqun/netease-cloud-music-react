@@ -27,7 +27,7 @@
     }
     .album{
         position: relative;
-        margin:15% 30px 0;
+        margin:15% 45px 0;
         .al{
             height:0;
             padding-top:100%;
@@ -41,10 +41,12 @@
             left:0;
             right:0;
             bottom:0;
-            padding:19%;
+            display: flex;
+            justify-content: center;align-items: center;
             img{
-                width:100%;
-                height:100%;
+                width:62%;
+                height:62%;
+
                 border-radius: 50%;
             }
         }
