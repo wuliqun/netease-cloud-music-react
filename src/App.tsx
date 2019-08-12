@@ -8,7 +8,7 @@ import Playlist from 'pages/playlist'
 
 import { historyStore } from 'store'
 import { Route,Switch } from 'react-router'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 
 import './App.css';
 
